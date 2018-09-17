@@ -1,0 +1,32 @@
+*,
+html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 10px;
+}
+
+body {
+  font-family: sans-serif;
+
+  p {
+    font-size: 1.6rem;
+  }
+}
+
+.main-content {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  .main {
+    width: 100%;
+  }
+}
+
+.card {
+  margin: 2rem;
+  border: 1px solid rgba(0, 0, 0, 0.11);
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.21);
+  overflow: hidden;
+}
