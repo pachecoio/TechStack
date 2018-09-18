@@ -16,6 +16,10 @@ class AddLibrary extends Component {
 
         event.preventDefault();
 
+        newLib.id = Math.floor((Math.random() * 10000) + 1);
+
+        console.log(newLib);
+
         this.props.addLibrary(newLib);
     }
 
@@ -57,7 +61,7 @@ class AddLibrary extends Component {
 }
 
 let newLib = {
-    id: Math.floor((Math.random() * 10000) + 1).toString(),
+    id: null,
     title: '',
     description: ''
 }

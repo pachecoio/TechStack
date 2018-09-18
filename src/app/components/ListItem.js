@@ -13,6 +13,7 @@ const listDescription = (isExpanded, description) => {
 }
 
 const ListItem = (props) => {
+    console.log(props);
     return (
         <div className={'list__item'} key={props.library.id} onClick={() => {
             props.selectLibrary(props.library.id)
@@ -21,6 +22,9 @@ const ListItem = (props) => {
                 <p>{ props.library.title }</p>
             </div>
             { listDescription(props.expanded, props.library.description) }
+            <div className="list__close" onClick={() => props.deleteLibrary(props.library.id)}>
+                <p>close</p>
+            </div>
         </div>
     )
 };

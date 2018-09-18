@@ -7,6 +7,7 @@
     border-bottom: 1px solid rgba(0, 0, 0, 0.2);
     cursor: pointer;
     transition: all .2s;
+    position: relative;
 
     p {
       transition: all .5s;
@@ -39,6 +40,30 @@
     font-size: 1.6rem;
     animation: enterDescription ease-in-out;
     animation-duration: .2s;
+  }
+
+  &__close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 2rem;
+    height: 2rem;
+    transform: scaleX(1.4);
+    opacity: .3;
+    margin: .5rem 0;
+
+    &:after {
+      content: 'X';
+      font-size: 1.6rem;
+    }
+
+    &:hover {
+      opacity: 1;
+    }
+
+    p {
+      display: none;
+    }
   }
 
 }

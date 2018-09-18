@@ -11,3 +11,10 @@ export const addLibrary = (newLibrary) => {
         payload: newLibrary
     }
 }
+
+export const deleteLibrary = (libraryId) => {
+    return {
+        type: 'delete_library',
+        payload: libraryId
+    }
+}
