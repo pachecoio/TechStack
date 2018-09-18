@@ -2,12 +2,18 @@
 
   width: 100%;
 
+  padding: 2rem;
+
   &__item {
     padding: 1em;
     border-bottom: 1px solid rgba(0, 0, 0, 0.2);
     cursor: pointer;
     transition: all .2s;
     position: relative;
+
+    &:first-of-type {
+      border-top: 1px solid rgba(0, 0, 0, 0.2);
+    }
 
     p {
       transition: all .5s;
@@ -64,6 +70,30 @@
     p {
       display: none;
     }
+  }
+
+}
+
+.addlibrary {
+
+  padding: 2rem;
+
+  &__header {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.21);
+
+    p {
+      text-transform: uppercase;
+      color: rgba(0, 0, 0, 0.66);
+      margin-left: 1rem;
+    }
+  }
+
+  &__content {
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
   }
 
 }

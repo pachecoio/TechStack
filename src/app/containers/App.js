@@ -7,6 +7,7 @@ import LibraryList from "../components/LibraryList";
 import AddLibrary from "../components/AddLibrary";
 
 export class App extends Component {
+
     render() {
         return (
             <Provider store={createStore(reducers)}>
@@ -23,3 +24,5 @@ export class App extends Component {
         );
     }
 }
+
+let addLibraryExpanded = false;

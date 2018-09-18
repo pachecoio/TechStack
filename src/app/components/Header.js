@@ -5,6 +5,9 @@ export class Header extends Component {
         return (
             <header className="header">
                 <h1 className={'header__text'}>{ this.props.headerText }</h1>
+                <div className="btn__add">
+                    <p>Add Library</p>
+                </div>
             </header>
     );
     }

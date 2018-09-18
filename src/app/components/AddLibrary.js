@@ -18,8 +18,6 @@ class AddLibrary extends Component {
 
         newLib.id = Math.floor((Math.random() * 10000) + 1);
 
-        console.log(newLib);
-
         this.props.addLibrary(newLib);
     }
 
@@ -42,21 +40,28 @@ class AddLibrary extends Component {
             <div className={'card'}>
                 <div className="addlibrary">
                     <div className="addlibrary__header">
-                        <p>Add</p>
+                        <p>Add new Tech</p>
                     </div>
                     <div className="addlibrary__content">
-                        <form onSubmit={this.handleSubmit}>
-                            <label htmlFor="title">
-                                Title
-                            </label>
-                            <input type="text" name={'title'} onChange={this.handleChange}/>
-                            <input type="text" name={'description'} onChange={this.handleChange}/>
-                            <input type="submit" value={'submit'}/>
+                        <form className={'form'} onSubmit={this.handleSubmit}>
+                            <div className="form__group">
+                                <label className={'form__label'} htmlFor="title">
+                                    Title
+                                </label>
+                                <input className={'form__input'} placeholder={'Title'} type="text" name={'title'} onChange={this.handleChange}/>
+                            </div>
+                            <div className="form__group">
+                                <label className={'form__label'} htmlFor="description">
+                                    Description
+                                </label>
+                                <textarea className={'form__input'} placeholder={'Description'} type="text" name={'description'} onChange={this.handleChange}/>
+                            </div>
+                            <input type="submit" className={'form__button'} value={'save'}/>
                         </form>
                     </div>
                 </div>
             </div>
-    );
+        );
     }
 }
 
