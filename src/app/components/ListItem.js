@@ -15,9 +15,6 @@ const listDescription = (isExpanded, description) => {
 const ListItem = (props) => {
     return (
         <div className={'list__item'} key={props.library.id} onClick={() => {
-
-
-
             props.selectLibrary(props.library.id)
         }}>
             <div className="list__header">

@@ -3,4 +3,11 @@ export const selectLibrary = (libraryId) => {
         type: 'select_library',
         payload: libraryId
     }
+};
+
+export const addLibrary = (newLibrary) => {
+    return {
+        type: 'add_library',
+        payload: newLibrary
+    }
 }
