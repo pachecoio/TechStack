@@ -56,7 +56,7 @@ class AddLibrary extends Component {
                                 </label>
                                 <textarea className={'form__input'} placeholder={'Description'} type="text" name={'description'} onChange={this.handleChange}/>
                             </div>
-                            <input type="submit" className={'form__button'} value={'save'}/>
+                            <input type="submit" className={'form__button btn__form'} value={'save'}/>
                         </form>
                     </div>
                 </div>
