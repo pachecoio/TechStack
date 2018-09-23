@@ -18,3 +18,10 @@ export const deleteLibrary = (libraryId) => {
         payload: libraryId
     }
 }
+
+export const openHeaderMenu = (isOpen) => {
+    return {
+        type: 'open_menu',
+        payload: !isOpen
+    }
+}

@@ -16,9 +16,18 @@ class AddLibrary extends Component {
 
         event.preventDefault();
 
-        newLib.id = Math.floor((Math.random() * 10000) + 1);
+        if(newLib.title !== '' && newLib.description !== '') {
+            newLib.id = Math.floor((Math.random() * 10000) + 1);
 
-        this.props.addLibrary(newLib);
+            this.props.addLibrary(newLib);
+
+            newLib = {
+                id: null,
+                title: '',
+                description: ''
+            }
+            document.getElementById('form').reset();
+        }
     }
 
     handleChange(event) {
@@ -43,7 +52,7 @@ class AddLibrary extends Component {
                         <p>Add new Tech</p>
                     </div>
                     <div className="addlibrary__content">
-                        <form className={'form'} onSubmit={this.handleSubmit}>
+                        <form id={'form'} className={'form'} onSubmit={this.handleSubmit}>
                             <div className="form__group">
                                 <label className={'form__label'} htmlFor="title">
                                     Title
